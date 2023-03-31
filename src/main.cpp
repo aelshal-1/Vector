@@ -3,6 +3,15 @@
 
 int main() {
   
+   int x;
+  Vector<int> v1;
+  for(int i=0;i <5;i++){
+    std:: cin >> x;
+    v1.add(x);
+  }
+
+  v1[0]=20;
+  v1.print();
   //init vector
   Vector<int> nums{1,2,3,4,5,6,7,8,9,10};
   nums.print();
