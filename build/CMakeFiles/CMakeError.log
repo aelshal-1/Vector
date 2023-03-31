@@ -1,0 +1,82 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-23utx2
+
+Run Build Command(s):C:/MinGW/bin/make.exe -f Makefile cmTC_d5e51/fast && C:/MinGW/bin/make.exe  -f CMakeFiles/cmTC_d5e51.dir/build.make CMakeFiles/cmTC_d5e51.dir/build
+make.exe[1]: Entering directory 'C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-23utx2'
+Building C object CMakeFiles/cmTC_d5e51.dir/src.c.obj
+C:/MinGW/bin/gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d5e51.dir/src.c.obj -c "C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-23utx2/src.c"
+C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-23utx2/src.c:1:10: fatal error: pthread.h: No such file or directory
+    1 | #include <pthread.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_d5e51.dir/build.make:77: recipe for target 'CMakeFiles/cmTC_d5e51.dir/src.c.obj' failed
+make.exe[1]: *** [CMakeFiles/cmTC_d5e51.dir/src.c.obj] Error 1
+make.exe[1]: Leaving directory 'C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-23utx2'
+Makefile:127: recipe for target 'cmTC_d5e51/fast' failed
+make.exe: *** [cmTC_d5e51/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-yvgcrr
+
+Run Build Command(s):C:/MinGW/bin/make.exe -f Makefile cmTC_edabd/fast && C:/MinGW/bin/make.exe  -f CMakeFiles/cmTC_edabd.dir/build.make CMakeFiles/cmTC_edabd.dir/build
+make.exe[1]: Entering directory 'C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-yvgcrr'
+Building C object CMakeFiles/cmTC_edabd.dir/CheckFunctionExists.c.obj
+C:/MinGW/bin/gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_edabd.dir/CheckFunctionExists.c.obj -c "C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-yvgcrr/CheckFunctionExists.c"
+Linking C executable cmTC_edabd.exe
+"C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_edabd.dir/objects.a
+C:/MinGW/bin/ar.exe qc CMakeFiles/cmTC_edabd.dir/objects.a @CMakeFiles/cmTC_edabd.dir/objects1
+C:/MinGW/bin/gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles/cmTC_edabd.dir/objects.a -Wl,--no-whole-archive -o cmTC_edabd.exe -Wl,--out-implib,libcmTC_edabd.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_edabd.dir/linkLibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot find -lpthreads
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles/cmTC_edabd.dir/build.make:99: recipe for target 'cmTC_edabd.exe' failed
+make.exe[1]: *** [cmTC_edabd.exe] Error 1
+make.exe[1]: Leaving directory 'C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-yvgcrr'
+Makefile:127: recipe for target 'cmTC_edabd/fast' failed
+make.exe: *** [cmTC_edabd/fast] Error 2
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-qnpkdk
+
+Run Build Command(s):C:/MinGW/bin/make.exe -f Makefile cmTC_71ef3/fast && C:/MinGW/bin/make.exe  -f CMakeFiles/cmTC_71ef3.dir/build.make CMakeFiles/cmTC_71ef3.dir/build
+make.exe[1]: Entering directory 'C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-qnpkdk'
+Building C object CMakeFiles/cmTC_71ef3.dir/CheckFunctionExists.c.obj
+C:/MinGW/bin/gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_71ef3.dir/CheckFunctionExists.c.obj -c "C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-qnpkdk/CheckFunctionExists.c"
+Linking C executable cmTC_71ef3.exe
+"C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_71ef3.dir/objects.a
+C:/MinGW/bin/ar.exe qc CMakeFiles/cmTC_71ef3.dir/objects.a @CMakeFiles/cmTC_71ef3.dir/objects1
+C:/MinGW/bin/gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create -Wl,--whole-archive CMakeFiles/cmTC_71ef3.dir/objects.a -Wl,--no-whole-archive -o cmTC_71ef3.exe -Wl,--out-implib,libcmTC_71ef3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/cmTC_71ef3.dir/linkLibs.rsp
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot find -lpthread
+collect2.exe: error: ld returned 1 exit status
+CMakeFiles/cmTC_71ef3.dir/build.make:99: recipe for target 'cmTC_71ef3.exe' failed
+make.exe[1]: *** [cmTC_71ef3.exe] Error 1
+make.exe[1]: Leaving directory 'C:/Users/Ahmed El-Shal/Desktop/Vector/build/CMakeFiles/CMakeScratch/TryCompile-qnpkdk'
+Makefile:127: recipe for target 'cmTC_71ef3/fast' failed
+make.exe: *** [cmTC_71ef3/fast] Error 2
+
+
+

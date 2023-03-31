@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Users/Ahmed El-Shal/Desktop/Vector/build",
+  "command": "C:/MinGW/bin/c++.exe   -g   -std=c++17 -o CMakeFiles/Vector.dir/src/main.cpp.obj -c \"C:/Users/Ahmed El-Shal/Desktop/Vector/src/main.cpp\"",
+  "file": "C:/Users/Ahmed El-Shal/Desktop/Vector/src/main.cpp"
+}
+]
